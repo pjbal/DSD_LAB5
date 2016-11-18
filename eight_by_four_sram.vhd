@@ -81,11 +81,11 @@ component m_by_n_sram_array
 			  data_out : out std_logic_vector(n-1 downto 0));
 end component;
 
-component nbit_triState
+component nbit_tri_buff
 	 Generic (n : positive);
-    Port ( data_in : in std_logic_vector(n-1 downto 0);
+    	Port ( Data_in : in std_logic_vector(n-1 downto 0);
            enable : in std_logic;
-			  data_out : out std_logic_vector(n-1 downto 0));
+           Output : out std_logic_vector(n-1 downto 0));
 end component;
 
 -- SIGNALS
@@ -106,6 +106,6 @@ decode : three_to_eight_decoder port map ('1', address, select_lines);
 
 ramarray : m_by_n_sram_array generic map (8, 4) port map (data_inout, select_lines, array_enable, array_to_tribuff);
 
-tribuff : nbit_triState generic map (4) port map (array_to_tribuff, buff_enable, data_inout);
+tribuff : nbit_tri_buff generic map (4) port map (array_to_tribuff, buff_enable, data_inout);
 
 end Behavioral;
