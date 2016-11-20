@@ -76,35 +76,43 @@ BEGIN
       -- hold reset state for 100 ns.
       wait for 100 ns;	
 
-      --stimulus 1- cell not selected
+      	
+		--stimulus 1- write 1 to latch
+		Data_in <= '1';
+		Write_enable <= '1';
+		Cell_select <= '1';
+		wait for 100 ns;
+		
+		--stimulus 2- hold 1
+		Write_enable <= '0';
+		Data_in <= '0';
+		Cell_select <= '1';
+		wait for 100 ns;
+		
+		--stimulus 3-  write 0 to latch
+		Data_in <= '0';
+		Write_enable <= '1';
+		Cell_select <= '1';
+		wait for 100 ns;
+		
+		--stimulus 4- hold 0
+		Write_enable <= '0';
+		Data_in <= '1';
+		Cell_select <= '1';
+		wait for 100 ns;
+		
+		--stimulus 5- cell not selected
 		Cell_select <= '0';
 		wait for 100 ns;
-		
-		--stimulus 2- write 1 to latch
-		Data_in <= '1';
 		Write_enable <= '1';
-		Cell_select <= '1'
-		wait for 100 ns;
-		
-		--stimulus 3- hold 1
-		Write_enable <= '0';
-		Data_in <= '0';
-		Cell_select <= '1'
-		wait for 100 ns;
-		
-		--stimulus 4-  write 0 to latch
-		Data_in <= '0';
-		Write_enable <= '1';
-		Cell_select <= '1'
-		wait for 100 ns;
-		
-		--stimulus 5- hold 0
-		Write_enable <= '0';
 		Data_in <= '1';
-		Cell_select <= '1'
 		wait for 100 ns;
-		
-		Cell_select <= '0'
+		Write_enable <= '0';
+		wait for 100 ns;
+		Write_enable <= '1';
+		Data_in <= '0';
+		wait for 100 ns;
+		Write_enable <= '0';
 
       wait;
    end process;
