@@ -1,31 +1,31 @@
 
 
 #slide switches
-NET "D_inputs[7]" LOC = J11;
+NET "D_inputs[7]" LOC = J11; #SW0
 NET "D_inputs[6]" LOC = J12;
 NET "D_inputs[5]" LOC = H16;
 NET "D_inputs[4]" LOC = H13;
 NET "D_inputs[3]" LOC = G12;
 NET "D_inputs[2]" LOC = E14;
 NET "D_inputs[1]" LOC = D16;
-NET "D_inputs[0]" LOC = B16;
+NET "D_inputs[0]" LOC = B16; #SW7
 
 
 #Push buttons
-NET "LoadShift" LOC = C13;
+NET "LoadShift" LOC = C13; #BTN0
 NET "preset" LOC = D12;
 NET "reset" LOC = C12;
-NET "shift_in" LOC = C10;
+NET "shift_in" LOC = C10; #BTN0
 
 #LEDS
-NET "Q_outputs[7]" LOC = C11;
+NET "Q_outputs[7]" LOC = C11; #LED0
 NET "Q_outputs[6]" LOC = D11;
 NET "Q_outputs[5]" LOC = B11;
 NET "Q_outputs[4]" LOC = A12;
 NET "Q_outputs[3]" LOC = A13;
 NET "Q_outputs[2]" LOC = B13;
 NET "Q_outputs[1]" LOC = A14;
-NET "Q_outputs[0]" LOC = B14;
+NET "Q_outputs[0]" LOC = B14; #LED7
 
 #CLK signal input
 NET "CLK" LOC = A10;
