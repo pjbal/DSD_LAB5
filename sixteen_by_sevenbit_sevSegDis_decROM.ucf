@@ -1,0 +1,27 @@
+#conect with wire BTN3 to CA1 and BTN4 to CA2
+
+#slide switches
+NET "address[3]" LOC = G12; #SW4
+NET "address[2]" LOC = E14;
+NET "address[1]" LOC = D16; 
+NET "address[0]" LOC = B16; #SW7
+
+#Seven-segment Displays
+#segment 0
+NET "data_outputs[6]" LOC = E3; #SEGA0
+NET	"data_outputs[5]" LOC = E1;
+NET	"data_outputs[4]" LOC = G5;
+NET	"data_outputs[3]" LOC = D1;
+NET	"data_outputs[2]" LOC = E4;
+NET	"data_outputs[1]" LOC = C1;
+NET	"data_outputs[0]" LOC = C2; #SEGG0
+
+#segement
+NET "data_outputs[6]" LOC = H6; #SEGA1
+NET	"data_outputs[5]" LOC = K2;
+NET	"data_outputs[4]" LOC = H3;
+NET	"data_outputs[3]" LOC = K1;
+NET	"data_outputs[2]" LOC = G4;
+NET	"data_outputs[1]" LOC = J2;
+NET	"data_outputs[0]" LOC = G3; #SEGG1
+
